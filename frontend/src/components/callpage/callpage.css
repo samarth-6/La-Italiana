@@ -1,0 +1,40 @@
+.customer-service {
+    max-width:800px;
+    margin: auto;
+    padding:20px;
+color:black;
+background-color: #f9f9f9;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.1);
+     text-align:center;
+}
+.customer-service h2{
+    font-size:24px;
+    margin-bottom:20px;
+    font-weight: 400;
+   
+}
+.location-map h3{
+    font-weight: 600;
+    font-size:medium;
+    text-align: start;
+}
+.contact-details{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:20px;
+}
+.contact-details li,.business-hours li{
+    margin-bottom:10px;
+}
+.business-hours,.location-map{
+    margin-bottom:20px;
+    
+}
+
+iframe {
+width:100%;
+border-radius:8px;margin-top:5px;
+   
+  }
+ 
