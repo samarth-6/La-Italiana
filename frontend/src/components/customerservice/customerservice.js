@@ -33,19 +33,15 @@ const Service=()=>{
   };
  
   useEffect(() => {
-    if (id) {
-      const fetch = async () => {
-        try {
-          const response = await axios.get(`${window.location.origin}/api/v2/getviews/${id}`);
-          setArray(response.data.list || []); 
-        } catch (error) {
-          console.error("Error fetching reviews:", error);
-          setArray([]); 
-        }
+    if (id){
+      const fetch=async()=>{
+        await axios.get(`${window.location.origin}/api/v2/getviews/${id}`).then((response)=>{
+          setArray(response.data.list ||[]);
+        });
       };
       fetch();
     }
-  }, [id]);
+  },[submit]);
   return (
     <>
       <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
