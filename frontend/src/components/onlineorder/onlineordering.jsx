@@ -80,7 +80,6 @@ const OnlineOrdering = () => {
             CheckOut More
             </button>
             <button onClick={goToService} className="w-full ml-2 p-3 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition duration-200">
-
             Want to give a Review?
           </button>
             </div>
