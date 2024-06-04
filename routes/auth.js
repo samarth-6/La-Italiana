@@ -12,7 +12,7 @@ router.post('/register',async(req,res)=>{
         await user.save().then(()=>
             res.status(200).json({message:"SignUp Successfull"}))
     }catch(error){
-        res.status(200).json(error.message);
+        res.status(200).json({message:"User Already exists"});
     }
 })
 router.post('/signin',async(req,res)=>{
