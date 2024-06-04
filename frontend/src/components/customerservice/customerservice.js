@@ -56,7 +56,7 @@ const Service=()=>{
       <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
         <ToastContainer />
         <div className="max-w-4xl w-full space-y-5 p-6 bg-white rounded-lg shadow-md mt-2">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800">Customer Reviews</h2> 
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800">Customer Reviews</h2>
           <div className="space-y-3">
             <input type="text" placeholder="Title" className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500" onClick={show} onChange={change} name="title" value={inputs.title} />
             <textarea id="textarea" placeholder="Description" className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500" onChange={change} name="description" value={inputs.description} style={{ display: 'none' }}
@@ -65,7 +65,6 @@ const Service=()=>{
           <div className="flex justify-end">
             <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-200" onClick={submit}>
               Add
-
             </button>
           </div>
         </div>
@@ -82,4 +81,5 @@ const Service=()=>{
     </>
   );
 };
+
 export default Service;
