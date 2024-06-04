@@ -6,18 +6,17 @@ import Heading from './heading.js';
 const Signup=()=>{
   const history=useNavigate();
   const [inputs,setInputs]=useState({email:'',username:'',password:''});
-
+  const [errorMessage,setErrorMessage]=useState('');
   const handleChange=(e)=>{
     const {name,value}=e.target;
     setInputs({...inputs,[name]:value});
   };
-
   const handleSubmit=async(e)=>{
     e.preventDefault();
     try {
       const response=await axios.post(`${window.location.origin}/api/v1/register`,inputs);
       if (response.data.message==='User Already Exists') {
-        alert(response.data.message);
+        setErrorMessage('User Already Exists');
       } else {
         alert(response.data.message);
         setInputs({ email: '', username: '', password: '' });
@@ -28,7 +27,7 @@ const Signup=()=>{
       }
   };
 
-  return (
+  return(
     <div className="min-h-screen flex justify-center items-center bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row">
@@ -40,6 +39,7 @@ const Signup=()=>{
               <button className="p-2 w-full bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 mt-4"  onClick={handleSubmit} >
                 Sign Up
               </button>
+              {errorMessage&&<p className="text-red-500 text-xs italic">{errorMessage}</p>}
               <div className="flex flex-col items-center justify-center">
             <span className=" text-gray-700  py-2 px-4 rounded focus:outline-none focus:shadow-outline " >
               Already have An Account?</span>
