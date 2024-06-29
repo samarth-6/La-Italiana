@@ -36,7 +36,8 @@ const Navbar=()=>{
         </div>
         <div className={`${isLoggedIn? 'block' : 'hidden'} md:flex`}>
           <ul className="flex space-x-4">
-            <li><Link to="/" className="hover:text-blue-500">Catalogue</Link></li>
+          <li><Link to="/" className="hover:text-blue-500">Home</Link></li>
+            <li><Link to="/menu" className="hover:text-blue-500">Catalogue</Link></li>
             <li><Link to="/about" className="hover:text-blue-500">About</Link></li>
             <li><Link to="/call" className="hover:text-blue-500">Customer Service</Link></li>
             <li><Link to="/onlineordering" className="hover:text-blue-500">Order Online</Link></li>

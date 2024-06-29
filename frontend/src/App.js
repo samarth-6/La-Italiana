@@ -3,6 +3,7 @@ import Signup from './components/Authentication/signup.js'
 import Signin from './components/Authentication/signin.js'
 import Navbar from './components/Navbar/navbar.js'
 import Catalogue from './components/catalogue/catalogue.js'
+import Home from './components/Home/home.js'
 import OnlineOrdering from './components/onlineorder/onlineordering.jsx'
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import {useDispatch} from "react-redux"
@@ -31,7 +32,8 @@ const App=()=>{
     <Navbar/>
     <ToastContainer/> 
       <Routes>
-        <Route exact path="/" element={<Catalogue/>}/>
+      <Route exact path="/" element={<Home/>}/>
+        <Route exact path="/menu" element={<Catalogue/>}/>
         <Route exact path="/about" element={<About/>}/>
         <Route exact path="/service" element={<Service/>}/>
         <Route exact path="/signin" element={<Signin/>}/>
